@@ -12,12 +12,10 @@ export const Year = () => {
     fetch(`https://taylor-swift-music.herokuapp.com/songs/year?year=${year}`)
       .then((res) => res.json())
       .then((json) => setReleaseYear(json));
-  }, []);
+  }, [year]);
 
   return (
     <>
-      <h1>A specific song</h1>
-      <p>The data displayed is a sample. There is more song data in the API.</p>
       {releaseYear.map((song) => (
         <div key={song.index}>
           <h1 key={song.index}>{song.name}</h1>

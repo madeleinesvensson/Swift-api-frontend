@@ -17,7 +17,6 @@ export const SongIndex = () => {
 
   return (
     <>
-      <h1>A specific song</h1>
       <p>The data displayed is a sample. There is more song data in the API.</p>
       <div key={song.index}>
         <h1 key={song.index}>{song.name}</h1>
@@ -48,7 +47,6 @@ export const SongName = () => {
 
   return (
     <>
-      <h1>A specific song</h1>
       <p>The data displayed is a sample. There is more song data in the API.</p>
       <div key={song.index}>
         <h1 key={song.index}>{song.name}</h1>

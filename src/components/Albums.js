@@ -12,12 +12,10 @@ export const Albums = () => {
     fetch(`https://taylor-swift-music.herokuapp.com/songs/album?album=${album}`)
       .then((res) => res.json())
       .then((json) => setAlbumName(json));
-  }, []);
+  }, [album]);
 
   return (
     <>
-      <h1>A specific song</h1>
-      <p>The data displayed is a sample. There is more song data in the API.</p>
       {albumName.map((song) => (
         <div key={song.index}>
           <h1 key={song.index}>{song.name}</h1>
