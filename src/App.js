@@ -22,9 +22,9 @@ export const App = () => {
     <>
       <h1>The Taylor Swift music data API.</h1>
       <div className="align-select">
-        <div className="select-song">
+        <button className="select-song" type="button">
           <Link to="songs">All songs</Link>
-        </div>
+        </button>
         <select
           onChange={(event) =>
             navigate(
