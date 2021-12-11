@@ -21,53 +21,54 @@ export const App = () => {
   return (
     <>
       <h1>The Taylor Swift music data API.</h1>
-      {/* <Link to={generatePath("/songs/index/:index", { index: 10 })}>
-          All songs
-        </Link> */}
-      <Link to="songs">All songs</Link>
-      <select
-        onChange={(event) =>
-          navigate(
-            generatePath("/songs/album/:album", {
-              album: event.target.value,
-            })
-          )
-        }
-      >
-        <option disabled selected value>
-          Albums
-        </option>
-        <option value="Taylor Swift">Taylor Swift</option>
-        <option value="Speak Now">Speak Now</option>
-        <option value="Red">Red</option>
-        <option value="1989">1989</option>
-        <option value="reputation">reputation</option>
-        <option value="Lover">Lover</option>
-        <option value="Folklore">Folklore</option>
-        <option value="Evermore">Evermore</option>
-        <option value="Fearless (Taylor's Version)">Fearless (TV)</option>
-      </select>
-      <select
-        onChange={(event) =>
-          navigate(
-            generatePath("/songs/year/:year", {
-              year: event.target.value,
-            })
-          )
-        }
-      >
-        <option disabled selected value>
-          Release year
-        </option>
-        <option value="2006">2006</option>
-        <option value="2010">2010</option>
-        <option value="2012">2012</option>
-        <option value="2014">2014</option>
-        <option value="2017">2017</option>
-        <option value="2019">2019</option>
-        <option value="2020">2020</option>
-        <option value="2021">2021</option>
-      </select>
+      <div className="align-select">
+        <div className="select-song">
+          <Link to="songs">All songs</Link>
+        </div>
+        <select
+          onChange={(event) =>
+            navigate(
+              generatePath("/songs/album/:album", {
+                album: event.target.value,
+              })
+            )
+          }
+        >
+          <option disabled selected value>
+            Albums
+          </option>
+          <option value="Taylor Swift">Taylor Swift</option>
+          <option value="Speak Now">Speak Now</option>
+          <option value="Red">Red</option>
+          <option value="1989">1989</option>
+          <option value="reputation">reputation</option>
+          <option value="Lover">Lover</option>
+          <option value="Folklore">Folklore</option>
+          <option value="Evermore">Evermore</option>
+          <option value="Fearless (Taylor's Version)">Fearless (TV)</option>
+        </select>
+        <select
+          onChange={(event) =>
+            navigate(
+              generatePath("/songs/year/:year", {
+                year: event.target.value,
+              })
+            )
+          }
+        >
+          <option disabled selected value>
+            Release year
+          </option>
+          <option value="2006">2006</option>
+          <option value="2010">2010</option>
+          <option value="2012">2012</option>
+          <option value="2014">2014</option>
+          <option value="2017">2017</option>
+          <option value="2019">2019</option>
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+        </select>
+      </div>
       <Routes>
         <Route index path="/" element={<Start />} />
         <Route path="/songs" element={<SongsList />} />

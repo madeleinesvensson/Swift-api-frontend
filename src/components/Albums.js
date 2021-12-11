@@ -15,12 +15,12 @@ export const Albums = () => {
   }, [album]);
 
   return (
-    <>
+    <div className="album-align">
       {albumName.map((song) => (
-        <div key={song.index}>
-          <h1 key={song.index}>{song.name}</h1>
-          <h2>{song.album}</h2>
-          <h3>{song.release_date}</h3>
+        <div key={song.index} className="album-container">
+          <h2 key={song.index}>{song.name}</h2>
+          <h3>{song.album}</h3>
+          <h4>{song.release_date}</h4>
           <p>Length: {song.length} miliseconds</p>
           <p>Dancability: {song.length}</p>
           <p>Acousticness: {song.acousticness}</p>
@@ -29,6 +29,6 @@ export const Albums = () => {
           <p>Tempo: {song.tempo}</p>
         </div>
       ))}
-    </>
+    </div>
   );
 };

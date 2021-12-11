@@ -16,12 +16,12 @@ export const SongIndex = () => {
   }, [index]);
 
   return (
-    <>
+    <div className="center-text">
       <p>The data displayed is a sample. There is more song data in the API.</p>
-      <div key={song.index}>
-        <h1 key={song.index}>{song.name}</h1>
-        <h2>{song.album}</h2>
-        <h3>{song.release_date}</h3>
+      <div key={song.index} className="album-container">
+        <h2 key={song.index}>{song.name}</h2>
+        <h3>{song.album}</h3>
+        <h4>{song.release_date}</h4>
         <p>Length: {song.length} miliseconds</p>
         <p>Dancability: {song.length}</p>
         <p>Acousticness: {song.acousticness}</p>
@@ -29,7 +29,7 @@ export const SongIndex = () => {
         <p>Dancability: {song.length}</p>
         <p>Tempo: {song.tempo}</p>
       </div>
-    </>
+    </div>
   );
 };
 
@@ -46,12 +46,12 @@ export const SongName = () => {
   }, [name]);
 
   return (
-    <>
-      <p>The data displayed is a sample. There is more song data in the API.</p>
-      <div key={song.index}>
-        <h1 key={song.index}>{song.name}</h1>
-        <h2>{song.album}</h2>
-        <h3>{song.release_date}</h3>
+    <div className="center-text">
+      <p>The data displayed is a sample. There is more data in the API.</p>
+      <div key={song.index} className="album-container">
+        <h2 key={song.index}>{song.name}</h2>
+        <h3>{song.album}</h3>
+        <h4>{song.release_date}</h4>
         <p>Length: {song.length} miliseconds</p>
         <p>Dancability: {song.length}</p>
         <p>Acousticness: {song.acousticness}</p>
@@ -59,6 +59,6 @@ export const SongName = () => {
         <p>Dancability: {song.length}</p>
         <p>Tempo: {song.tempo}</p>
       </div>
-    </>
+    </div>
   );
 };
